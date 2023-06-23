@@ -1,0 +1,19 @@
+import random
+
+def roll_dice():
+    min_value = 1
+    max_value = 6
+    return random.randint(min_value, max_value)
+
+def dice_simulation():
+    print("Dice Rolling Simulator")
+    while True:
+        roll = input("Press Enter to roll the dice (or 'q' to quite): ")
+
+        if roll.lower() == 'q':
+            print("Exiting....")
+            break
+        dice_value = roll_dice()
+        print(f"The dice rolled: {dice_value}")
+
+dice_simulation()
